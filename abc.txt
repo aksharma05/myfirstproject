@@ -1,0 +1,145 @@
+<style type="text/css">
+.content-wrapper{background:url("//c.fareportal.com/gcms/Portals/2/responsive/images/sem/New-airlines-banner/banner-bg.jpg?gcms-srv") no-repeat center top}
+@media (min-width: 768px) and (max-width: 991px) {
+.cro-section{background:url("//c.fareportal.com/gcms/Portals/2/responsive/images/sem/New-airlines-banner/banner-bg.jpg?gcms-srv") no-repeat center -14px;background-size:cover}
+}
+</style>
+  <xsl:variable name="returnval" select="'[#dealtype#]'"/>
+<section class="cro-section col-xs-12 col-md-5 col-lg-6" id="tabTd">
+<xsl:variable name = "GlobalData" select="CMSXsltUtility:GetDatafromDMS('6f8d8922-a507-453f-bb3d-253eb4d3a1fd','')/DMSDeal/Deals/row"/>
+<xsl:variable name = "UniqueID" select="$GlobalData/UniqueResponseID"/>
+
+<xsl:variable name="dash"><![CDATA[-]]></xsl:variable>
+
+
+
+
+<xsl:if test="$GlobalData != '' ">
+
+
+<!--<div class="bheading" title="Static Deals">
+    <header>
+    <span class="b-head" style="font-size:22px !important; width:320px !important">Nonstop Flight Deals!</span><div style="clear:both; height:1px;">&nbsp;</div>
+    <span class="b-head" style="font-size:16px !important">Fly Roundtripfrom  $116<sup style="font-size: 65%; position: relative; top: -6px;">.20*</sup> <br /> <span style="font-size:11px; font-weight:normal">Taxes and Fees Included </span></span>
+    </header>
+</div>-->
+
+
+<div style="padding-bottom: 10px; color: rgb(255, 255, 255); background: none repeat scroll 0px 0px transparent;" class="bheading"><span style="width: 340px ! important; font-size: 24px ! important; padding-top:10px" class="b-head">[#headertext#]</span>
+
+
+
+  
+  </div>
+
+ 
+
+<div style="float:left">
+      <div class="deals">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="dealoffse1">From</th>
+              <th class="hidden-xs dealoffse1">To</th>
+              <th class="hidden-xs dealoffse1">Travel Dates</th>
+              <th class="text-right">Fares*</th>
+            </tr>
+          </thead>
+          <tbody>
+<xsl:for-each select="$GlobalData">
+              
+             
+                       	  <xsl:variable name="dms-date-from" select="substring-after(FromDate,'/')" />
+                          <xsl:variable name="from-date-fine" select="substring-before($dms-date-from,'/')" />
+                          <xsl:variable name="from-year-fine" select="substring-after($dms-date-from,'/')" />
+                          <xsl:variable name="dms-month-from" select="substring-before(FromDate,'/')" />
+                          <xsl:variable name="from-month-fine">
+                          <xsl:if test ="$dms-month-from = '1' or $dms-month-from = '01'">Jan</xsl:if>
+                          <xsl:if test ="$dms-month-from = '2' or $dms-month-from = '02'">Feb</xsl:if>
+                          <xsl:if test ="$dms-month-from = '3' or $dms-month-from = '03'">Mar</xsl:if>
+                          <xsl:if test ="$dms-month-from = '4' or $dms-month-from = '04'">Apr</xsl:if>
+                          <xsl:if test ="$dms-month-from = '5' or $dms-month-from = '05'">May</xsl:if>
+                          <xsl:if test ="$dms-month-from = '6' or $dms-month-from = '06'">Jun</xsl:if>
+                          <xsl:if test ="$dms-month-from = '7' or $dms-month-from = '07'">Jul</xsl:if>
+                          <xsl:if test ="$dms-month-from = '8' or $dms-month-from = '08'">Aug</xsl:if>
+                          <xsl:if test ="$dms-month-from = '9' or $dms-month-from = '09'">Sep</xsl:if>
+                          <xsl:if test ="$dms-month-from = '10'">Oct</xsl:if>
+                          <xsl:if test ="$dms-month-from = '11'">Nov</xsl:if>
+                          <xsl:if test ="$dms-month-from = '12'">Dec</xsl:if>
+                          </xsl:variable>
+                          <xsl:variable name="dms-date-to" select="substring-after(ToDate,'/')" />
+                          <xsl:variable name="to-date-fine" select="substring-before($dms-date-to,'/')" />
+                          <xsl:variable name="to-year-fine" select="substring-after($dms-date-to,'/')" />
+                          <xsl:variable name="dms-month-to" select="substring-before(ToDate,'/')" />
+                          <xsl:variable name="to-month-fine">
+                          <xsl:if test ="$dms-month-to = '1' or $dms-month-to = '01'">Jan</xsl:if>
+                          <xsl:if test ="$dms-month-to = '2' or $dms-month-to = '02'">Feb</xsl:if>
+                          <xsl:if test ="$dms-month-to = '3' or $dms-month-to = '03'">Mar</xsl:if>
+                          <xsl:if test ="$dms-month-to = '4' or $dms-month-to = '04'">Apr</xsl:if>
+                          <xsl:if test ="$dms-month-to = '5' or $dms-month-to = '05'">May</xsl:if>
+                          <xsl:if test ="$dms-month-to = '6' or $dms-month-to = '06'">Jun</xsl:if>
+                          <xsl:if test ="$dms-month-to = '7' or $dms-month-to = '07'">Jul</xsl:if>
+                          <xsl:if test ="$dms-month-to = '8' or $dms-month-to = '08'">Aug</xsl:if>
+                          <xsl:if test ="$dms-month-to = '9' or $dms-month-to = '09'">Sep</xsl:if>
+                          <xsl:if test ="$dms-month-to = '10'">Oct</xsl:if>
+                          <xsl:if test ="$dms-month-to = '11'">Nov</xsl:if>
+                          <xsl:if test ="$dms-month-to = '12'">Dec</xsl:if>
+                          </xsl:variable>
+<xsl:variable name="fareamount" select="format-number(LiveTotalFare, '#.00')" />
+<xsl:variable name="fareroundamount" select="substring-before($fareamount,'.')" />
+<xsl:variable name="faredecamount" select="substring-after($fareamount,'.')" />
+
+
+         
+<tr class="deal-list"  style="display:none">
+
+    <xsl:attribute name="data-org-name"><xsl:value-of select="OriginCityCode"/></xsl:attribute>
+<xsl:attribute name="data-dest-name"><xsl:value-of select="DestCityCode"/></xsl:attribute>
+<xsl:attribute name="data-org-code"><xsl:value-of select="OriginCityCode"/></xsl:attribute>
+<xsl:attribute name="data-dest-code"><xsl:value-of select="DCode"/></xsl:attribute>
+<xsl:attribute name="data-fromdate"><xsl:value-of select="FromDate"/></xsl:attribute>
+<xsl:if test="$returnval !='oneway'">
+<xsl:attribute name="data-todate"><xsl:value-of select="ToDate"/></xsl:attribute>
+</xsl:if>
+<xsl:if test="$returnval ='oneway'">
+<xsl:attribute name="data-todate"></xsl:attribute>
+</xsl:if>
+<xsl:attribute name="data-dealid">946cd34f-9049-4afa-92b8-1bfa0b304d98</xsl:attribute>
+    
+<td><xsl:value-of select="OriginCityName"/> <span class="visible-xs"><xsl:value-of select="FromDate"/></span> <span class="visible-xs"><xsl:value-of select="ToDate"/></span></td>
+<td class="hidden-xs"><xsl:value-of select="DestCityName"/></td>
+<td class="hidden-xs padstatic"><xsl:value-of select="$from-month-fine" />&#160;<xsl:value-of select="$from-date-fine" /><xsl:if test="$returnval !='oneway'"> - <xsl:value-of select="$to-month-fine" />&#160;<xsl:value-of select="$to-date-fine" /></xsl:if><br/><!--<xsl:value-of select="Return"/>--></td>
+<td class="text-right deal-fare">$<xsl:value-of select="$fareroundamount"/><sup>.<xsl:value-of select="$faredecamount"/></sup></td>
+</tr>
+
+
+</xsl:for-each>
+          </tbody>
+        </table>
+      </div>
+      <div id="UniqueID" class="grtxt smtxt txt-right"><xsl:value-of select="$UniqueID"/></div>
+  <div class="dyntncdate mar-lft--rt_3pr bookby"> 
+    <p class="smtxt">
+    * All fares above were last found on <span style="color:#e00707">[#update#]</span> <!--<xsl:value-of select="$isexist1/LastFareFound"/>-->. 
+	<xsl:if test="$returnval !='oneway'">
+<xsl:for-each select="CMSXsltUtility:GetDataFromFile('/SEM-Includes/include/responsive-deal-disclaimer.txt')/root" >
+<xsl:value-of disable-output-escaping="yes" select="content"/>
+</xsl:for-each>
+</xsl:if>
+<xsl:if test="$returnval ='oneway'">
+<xsl:for-each select="CMSXsltUtility:GetDataFromFile('/SEM-Includes/include/responsive-deal-oneway-disclaimer.txt')/root" >
+<xsl:value-of disable-output-escaping="yes" select="content"/>
+</xsl:for-each>
+</xsl:if>
+
+
+    </p>
+  </div>
+
+      </div>
+<!-- Dms Static End-->
+
+</xsl:if>
+
+
+</section>
