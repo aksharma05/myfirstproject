@@ -1,3 +1,6 @@
+test for check
+
+
 <style type="text/css">
 .content-wrapper{background:url("//c.fareportal.com/gcms/Portals/2/responsive/images/sem/New-airlines-banner/banner-bg.jpg?gcms-srv") no-repeat center top}
 @media (min-width: 768px) and (max-width: 991px) {
